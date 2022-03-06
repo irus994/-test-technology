@@ -79,19 +79,27 @@
                 </ul>
             </div>
             <h2 class="main__header" id="real">Примеры использования в реальных проектах</h2>
-            <figure class="img">
-                <figcaption class="img_caption">useEffect используется для получения данных введенных в форму, чтобы на их основании получить с сервера только данные соответсвующие выбранным параметрам. </figcaption>
-                <img class="img__picture" src="img/use-effect.png" alt="useEffect" width="100%">
-            </figure>
-            <figure class="img">
-                <figcaption class="img_caption">useState используется для изменения порятка сортировок по рейтингу и по алфавиту</figcaption>
-                <img class="img__picture" src="img/use-state.png" alt="useState" width="100%">
-            </figure>
-            <figure class="img">
+            <ul class="img-list">
+                <li class="img-list__item">
+                    <figure class="img">
+                    <figcaption class="img_caption">useEffect используется для получения данных введенных в форму, чтобы на их основании получить с сервера только данные соответсвующие выбранным параметрам. </figcaption>
+                    <img class="img__picture" src="img/use-effect.png" alt="useEffect" width="100%">
+                </figure>
+                </li>
+                <li class="img-list__item">
+                    <figure class="img">
+                    <figcaption class="img_caption">useState используется для изменения порятка сортировок по рейтингу и по алфавиту</figcaption>
+                    <img class="img__picture" src="img/use-state.png" alt="useState" width="100%">
+                </figure>
+                </li>
+                <li class="img-list__item">
+                    <figure class="img">
                 <figcaption class="img_caption">useRef используется для получения доступа DOM узлам. В данном случае к информации из трех полей формы. На первом изображении мы обявляем переменные для каждого из полей. На втором, показано, как эти переменные связываются с конкретным полем в разметке. Значение этого поля можно получить при помощи locationRef.current.value </figcaption>
                 <img class="img__picture" src="img/use-ref.png" alt="useRef-объявление" width="100%">
                 <img class="img__picture" src="img/use-ref-2.png" alt="useRef-связывание с элементом разметки" width="100%">
             </figure>
+                </li>
+            </ul>
         </article>
         Дополнительная информация о React есть на официальном сайте: <a class="link" href="https://ru.reactjs.org/">ru.reactjs.org</a>
     </main>
