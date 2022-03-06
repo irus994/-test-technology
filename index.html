@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Описание наиболее часто используемых React хуков: описание, детали, примеры из реальных проектов.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Часто используемые React хуки - useState, useEffect, useRef</title>
+</head>
+<body class="body">
+<button class="button-up" type="button">Вверх</button>
+    <header class="header">
+        <p class="header__text">Хуки — нововведение в React 16.8, которое позволяет использовать состояние и другие возможности React без написания классовых компонентов. Ниже пречисленны лишь самые часто используемые, узнать подробнее и познакомиться с другими хуками можно по <a class="link" href="https://ru.reactjs.org/docs/hooks-reference.html">ссылке</a></p>
+    </header>
+    <main class="main">
+        <article class="main__article">
+            <div class="main__table-contents">
+                <p class="main__table-contents-header">Оглавление</p>
+                <ul class="main__table-contents-list">
+                    <li class="main__table-contents-item"><a class="main__table-contents-link" href="#hooks">Основные хуки</a></li>
+                    <li class="main__table-contents-item"><a class="main__table-contents-link" href="#useState">useState</a></li>
+                    <li><a class="main__table-contents-link" href="#useEffect">useEffect</a></li>
+                    <li class="main__table-contents-item"><a class="main__table-contents-link" href="#useRef">useRef</a></li>
+                    <li class="main__table-contents-item"><a class="main__table-contents-link" href="#real">Примеры использования в реальных проектах</a></li>
+                </ul>
+            </div>
+            <h1 class="main__header" id="hooks">Основные React хуки</h1>
+            <div class="wrapper">
+                <ul class="main__article-list">
+                    <li class="main__article-item">
+                        <h2 class="main__article-item-header" id="useState">useState</h2>
+                        <div class="main__article-item-content">
+                            <p>Отвечает за изменение состояния, каких-либо элементов внутри компонента. Например, изменение значения счетчика при нажатии на кнопку</p>
+                            <p>Возвращает массив из 2-х значений:</p>
+                            <ol>
+                                <li>Значение переменной</li>
+                                <li>Функцию, которая ее изменяет</li>
+                            </ol>
+                            <p>В useState(X) указывается начальное значение - X</p>
+                            <p class="code">const [count, setCount] = useState(0);</p>
+                        </div>
+                    </li>
+                    <li class="main__article-item">
+                        <h2 class="main__article-item-header" id="useEffect">useEffect</h2>
+                        <div class="main__article-item-content">
+                            <p>Необходим для реализации сайдэффектов (внешних эффектов), т. е. сихронизации компонента с "внешним миром", например с сервером</p>
+                            <p>Принимает 2 параметра:</p>
+                            <ul>
+                                <li>Колбек-функцию (то что нужно сделать)</li>
+                                <li>Массив зависимостей. Опционально (при изменении каких данных, повторно вызывать useEffect)</li>
+                            </ul>
+                            <p>Далее есть 3 варианта: </p>
+                            <ul>
+                                <li>Если массив присутсвует - useEffect вызывается при каждом изменении массива</li>
+                                <li>Если присутсвует пустой массив - useEffect вызывается один раз, при отрисовке компонента</li>
+                                <li>Если второго параметра нет, useEffect вызывается при каждом рендере (при каждой перересовке компонента) </li>
+                            </ul>
+                            <p class="code">
+                                useEffect(() => {
+                                //действие, которое нужно выполнить
+                                }, [массив зависимостей]);
+                            </p>
+                        </div>
+                    </li>
+                    <li class="main__article-item">
+                        <h2 class="main__article-item-header" id="useRef">useRef</h2>
+                        <div class="main__article-item-content">
+                            <p>В основном используется в React для получения доступа к DOM элементам</p>
+                            <p>useRef возвращает изменяемый ref-объект, свойство .current которого инициализируется переданным аргументом (initialValue). Возвращённый объект будет сохраняться в течение всего времени жизни компонента.</p>
+                            <p class="code">
+                                const inputEl = useRef(null);
+                                // `current` указывает на смонтированный элемент `input`
+                                inputEl.current.focus();
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="main__header" id="real">Примеры использования в реальных проектах</h2>
+            <figure class="img">
+                <figcaption class="img_caption">useEffect используется для получения данных введенных в форму, чтобы на их основании получить с сервера только данные соответсвующие выбранным параметрам. </figcaption>
+                <img class="img__picture" src="img/use-effect.png" alt="useEffect" width="100%">
+            </figure>
+            <figure class="img">
+                <figcaption class="img_caption">useState используется для изменения порятка сортировок по рейтингу и по алфавиту</figcaption>
+                <img class="img__picture" src="img/use-state.png" alt="useState" width="100%">
+            </figure>
+            <figure class="img">
+                <figcaption class="img_caption">useRef используется для получения доступа DOM узлам. В данном случае к информации из трех полей формы. На первом изображении мы обявляем переменные для каждого из полей. На втором, показано, как эти переменные связываются с конкретным полем в разметке. Значение этого поля можно получить при помощи locationRef.current.value </figcaption>
+                <img class="img__picture" src="img/use-ref.png" alt="useRef-объявление" width="100%">
+                <img class="img__picture" src="img/use-ref-2.png" alt="useRef-связывание с элементом разметки" width="100%">
+            </figure>
+        </article>
+        Дополнительная информация о React есть на официальном сайте: <a class="link" href="https://ru.reactjs.org/">ru.reactjs.org</a>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

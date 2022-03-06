@@ -1,0 +1,255 @@
+
+.body {
+    min-width: 320px;
+    max-width: 1800px;
+    width: 100%;
+    margin: auto;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    box-sizing: border-box;
+    color: #EBEBEB;
+    background: linear-gradient(to bottom right, rgba(11, 15, 23, 0.82), rgba(255, 192, 203, 0.5));
+    background-repeat: no-repeat;
+}
+
+.body--data {
+    margin: 100px auto;
+    min-height: 100vh;
+    min-width: 900px;
+}
+
+.header {
+    height: auto;
+    padding: 10px 20px;
+    background-color: rgba(11, 15, 23, 0.6);
+}
+
+.button-up {
+    position: sticky;
+    z-index: 200;
+    top: 300px;
+    left: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 200;
+    color: #EBEBEB;
+    background-color: rgba(255, 192, 203, 0.5);
+    border: none;
+    opacity: 0.8;
+    margin: 0 30px;
+}
+
+.button-up:hover {
+    opacity: 1;
+}
+
+.button-up:active {
+    opacity: 1;
+    background-color: pink;
+}
+
+.header__text {
+    font-style: italic;
+    color: rgba(169, 169, 169);
+    font-size: 27px;
+}
+
+.link {
+    color: pink;
+    text-decoration: none;
+}
+
+.header__link:hover {
+    opacity: 0.5;
+}
+
+.header__link:active {
+    color: #EBEBEB;
+}
+
+.main {
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #0B0F17, pink);
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 400px;
+    min-width: 900px;
+    z-index: 100;
+    padding: 30px 150px;
+    margin: 10px auto;
+    background-color: rgba(11, 15, 23, 0.6);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main__header {
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.main__article-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.main__article-item {
+    z-index: 100;
+    padding: 10px 20px;
+    margin: 5px 5px 15px 5px;
+    background-color: rgba(11, 15, 23, 0.6);
+    border-radius: 10px;
+    width: 30%;
+    min-width: 300px;
+}
+
+.main__article-item-header {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 200;
+}
+
+.main__article-item-content {
+    height: 550px;
+    width: 100%;
+    margin: 0;
+    overflow: scroll;
+}
+
+.code {
+    background-color: rgba(216, 216, 216, 0.42);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.img {
+    margin-top: 20px;
+}
+
+.img__picture {
+    border-radius: 10px;
+}
+
+.img_caption {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgba(11, 15, 23, 0.6);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.main__table-contents {
+    width: auto;
+    background-color: rgba(216, 216, 216, 0.42);
+    padding: 15px;
+}
+
+.main__table-contents {
+    margin: 0;
+    border-radius: 10px;
+}
+
+.main__table-contents-link {
+    color: #EBEBEB;
+    font-size: 25px;
+}
+
+.main__table-contents-link:hover {
+    opacity: 0.5;
+}
+
+.main__table-contents-link:active {
+    color: pink;
+}
+
+@media (max-width: 520px) {
+    .body {
+        font-size: 25px;
+    }
+
+    .main__article-item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 1154px){
+
+    .main__article-item {
+        width: 45%;
+    }
+}
+
+.wrapper-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.form__input {
+    height: 30px;
+    padding: 30px;
+    font-size: 30px;
+    color: rgba(169, 169, 169);
+    border: 2px solid rgba(169, 169, 169);
+    background-color: rgba(11, 15, 23, 0.6);
+    border-radius: 10px;
+    outline: none;
+}
+
+.form__input:hover {
+    background-color: rgba(11, 15, 23, 0.44);
+}
+
+.button-conversion {
+    height: 200px;
+    width: 320px;
+    padding: 30px;
+    margin-left: 10px;
+    margin-top: 45px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    border: 2px solid rgba(169, 169, 169);
+    background-color: rgba(11, 15, 23, 0.6);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.button-conversion:hover {
+    background-color: rgba(11, 15, 23, 0.44);
+}
+
+.button-conversion:active {
+    background-color: rgba(11, 15, 23, 0.79);
+}
+
+.button-conversion__text {
+    font-size: 30px;
+    color: rgba(169, 169, 169);
+}
+
+.wrapper-input {
+    min-width: 100%;
+    margin: 0;
+}
+
+.form__label {
+    margin: 10px 0;
+}

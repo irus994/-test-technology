@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Простая программа изменяющая формат даты. Получить дополнительные данные о дате одним нажатием">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Конвертация данных - изменение формата даты </title>
+</head>
+<body class="body body--data">
+<header class="header">
+    <p class="header__text">Введите любую дату в формате: “дд.мм.гггг” (пример “01.01.2022”) и получите данные о дне недели </p>
+</header>
+<main>
+    <div class="main-wrapper">
+        <div class="wrapper-form">
+            <form class="form">
+                <div class="wrapper-input">
+                    <label class="form__label" for="userDate">Введите дату</label>
+                    <input class="form__input" type="text" id="userDate" name="userDate" placeholder="дд.мм.гггг">
+                </div>
+                <div class="wrapper-input">
+                    <label class="form__label" for="resultDate">Результат</label>
+                    <input class="form__input" id="resultDate" name="resultDate" disabled>
+                </div>
+            </form>
+        </div>
+        <button class="button-conversion"><p class="button-conversion__text">Преобразовать</p></button>
+    </div>
+</main>
+<script src="scripts/script-conversion.js"></script>
+</body>
+</html>
