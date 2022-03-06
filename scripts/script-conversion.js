@@ -9,7 +9,8 @@ const getDayInfo = (date) => {
     const year = date.substring(6, 10);
     const resultData = new Date(year + ', ' + month + ', ' + day);
     const weekDay = daysOfWeek[resultData.getDay()];
-    const monthName = months[resultData.getMonth()]
+    const monthName = months[resultData.getMonth()];
+
     if (day <= 7) {
         weekCount = '1';
     } else if (day > 7 && day <= 14) {
@@ -23,10 +24,7 @@ const getDayInfo = (date) => {
     return `${weekDay}, ${weekCount} неделя ${monthName} ${year} года`;
 };
 
-console.log(getDayInfo('01.01.2022'))
-
-
-const buttonConversion = document.querySelector('.button-conversion')
+const buttonConversion = document.querySelector('.button-conversion');
 
 const onConversion = () => {
     const userData = document.querySelector('#userDate');
@@ -37,8 +35,6 @@ const onConversion = () => {
     } else {
         resultData.value = 'Введите данные';
     }
-
-
 }
 
 buttonConversion.addEventListener('click', onConversion);
